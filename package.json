@@ -1,5 +1,5 @@
 {
-  "name": "wot.care",
+  "name": "mml.unegma.ai",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,9 +12,9 @@
     "@react-three/fiber": "^8.14.5",
     "@react-three/rapier": "^1.1.1",
     "@react-three/xr": "^5.0.1",
+    "@unegma/mml-lib-frontend": "^8.0.0",
+    "@unegma/mml-types": "^5.0.0",
     "@unegma/utilities": "^4.1.0",
-    "@unegma/wot-lib-frontend": "^6.7.1",
-    "@unegma/wot-types": "^4.0.2",
     "ecctrl": "^1.0.61",
     "lamina": "^1.1.23",
     "r3f-perf": "^7.1.2",
@@ -50,7 +50,7 @@
     "DEPLOY-PRODUCTION": ". .env && export REACT_APP_APP_ENV=production && react-app-rewired build --prod && aws --profile $PROFILE s3 sync --delete ./build s3://$AWS_BUCKET_NAME",
     "DEPLOY-STAGING": ". .env && export REACT_APP_APP_ENV=staging && react-app-rewired build --prod && aws --profile $PROFILE s3 sync --delete ./build s3://$AWS_BUCKET_NAME_STAGING",
     "### Update external libraries": "",
-    "update-wot-libraries": "npm install @unegma/wot-lib-frontend@latest; npm install @unegma/wot-types@latest"
+    "update-mml-libraries": "npm install @unegma/mml-lib-frontend@latest; npm install @unegma/mml-types@latest"
   },
   "eslintConfig": {
     "extends": [
