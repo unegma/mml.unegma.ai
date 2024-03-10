@@ -10,11 +10,12 @@ import RightSideDrawer from "./components/layout/RightSideDrawer";
 import useSceneInteractions from "./hooks/useSceneInteractions";
 import BarScene from "./components/3d/BarScene";
 import BookingModal from "./components/BookingModal/BookingModal";
+import HomeScreen from "./components/pages/HomeScreen";
 
 function App() {
   const [showImages, setShowImages] = useState(false);
   const [showInfoModal, setShowInfoModal] = useState(false);
-  const [showBookingModal, setShowBookingModal] = useState(true);
+  const [showBookingModal, setShowBookingModal] = useState(false);
 
   const [personality, setPersonality] = useState('moody');
 
@@ -100,10 +101,7 @@ function App() {
           key={'home'}
           path="/"
           element={
-            <RelicOne showBookingModal={showBookingModal} personality={personality} speaking={speaking} setSpeaking={setSpeaking} setOverrideNativeEvent={setOverrideNativeEvent} rotationLock={false} cameraPosition={[0,0,0]} minDistance={1} maxDistance={10} movable={movable} setMovable={setMovable}  relic={
-              // todo CAMERA POSITION HERE MIGHT NEED TO BE [-10,10,-10] AS I CHANGED IT FROM THIS (camera position doesnt seem to do anything)
-              <BarScene personality={personality} speaking={speaking} setSpeaking={setSpeaking} scale={masterScale} setConsoleMessage={setConsoleMessage} setPlayerPosition={setPlayerPosition} playerPosition={playerPosition} />}
-            />
+            <HomeScreen toggleLeftSideDrawer={toggleLeftSideDrawer} />
           }
         />
 
