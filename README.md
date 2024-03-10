@@ -1,10 +1,3 @@
-Title page image from here: https://unsplash.com/photos/D4jRahaUaIc
-Necklace from here: https://sketchfab.com/3d-models/jashin-necklace-028988c5cc7b49c0addeb93bf3a6ff0f
-Gem here: https://sketchfab.com/3d-models/blue-diamond-free-giveaway-618d614891354c1f86f07845080e13e7
-
-to debug on android: chrome://inspect/#devices
-
-
 # Usage
 
 ## Setup
