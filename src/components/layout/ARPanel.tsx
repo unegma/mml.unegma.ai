@@ -149,26 +149,26 @@ export default function ARPanel({showBookingModal, personality, speaking, setSpe
     console.log('audio',base64Audio);
 
     // todo check SA2Response type data is the only data on the response
-    const responseData: MMLApiResponse = await createResponse(
-      ENDPOINT,
-      '',
-      base64Audio,
-      '',
-      browser,
-      conversation,
-      personality
-    );
-    console.log('response data:', responseData);
-
-    // @ts-ignore
-    setAudioBuffer(responseData.barboyResponseAudio.data); // todo handle if this is null
-    setSpeaking(true);
-    setAudioURI(responseData.message);
-
-    //@ts-ignore
-    setConversation(JSON.parse(responseData.conversation));
-    setTranscription(responseData.transcription);
-    setBarboyResponse(responseData.barboyResponse);
+    // const responseData: MMLApiResponse = await createResponse(
+    //   ENDPOINT,
+    //   '',
+    //   base64Audio,
+    //   '',
+    //   browser,
+    //   conversation,
+    //   personality
+    // );
+    // console.log('response data:', responseData);
+    //
+    // // @ts-ignore
+    // setAudioBuffer(responseData.barboyResponseAudio.data); // todo handle if this is null
+    // setSpeaking(true);
+    // setAudioURI(responseData.message);
+    //
+    // //@ts-ignore
+    // setConversation(JSON.parse(responseData.conversation));
+    // setTranscription(responseData.transcription);
+    // setBarboyResponse(responseData.barboyResponse);
 
     setProcessing(false);
     setDone(true);
